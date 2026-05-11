@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-test
+  labels:
+    pod-type: test
+    env: dev
+spec:
+  - name: nginx
+    image: nginx
