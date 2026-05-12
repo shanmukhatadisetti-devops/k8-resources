@@ -19,7 +19,7 @@ spec:
     volumeMounts:
     - mountPath: /mnt/nginx.logs
       name: emptydir
-  volume:
+  volumes:
   - name: emptydir
     emptyDir:
       sizeLimit: 100Mi
