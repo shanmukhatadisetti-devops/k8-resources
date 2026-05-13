@@ -52,6 +52,7 @@ metadata:
     type: ebs-test
     env: dev
 spec:
+  type: LoadBalancer
   selector:
     type: ebs-test
     env: dev 
