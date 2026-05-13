@@ -12,3 +12,15 @@ spec:
     fsType: ext4
     volumeHandle: vol-0ad983c5810b7a0da
 ---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: ebs-claim
+spec:
+  storageClassName: "" 
+  volumeName: test
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi
