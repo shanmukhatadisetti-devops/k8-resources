@@ -43,3 +43,19 @@ spec:
   - name: persistent-storage
     persistentVolumeClaim:
       claimName: ebs-claim
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-svc 
+  labels:
+    type: ebs-test
+    env: dev
+spec:
+  selector:
+    type: ebs-test
+    env: dev 
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
