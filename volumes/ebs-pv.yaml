@@ -28,8 +28,10 @@ spec:
 apiVersion: v1
 kind: Pod
 metadata:
-  type: ebs-test
-  env: dev 
+  name: nginx
+  labels:
+    type: ebs-test
+    env: dev 
 spec:
   containers:
   - name: nginx
